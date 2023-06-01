@@ -50,7 +50,7 @@ extensions = [Extension(
     )]
 
 if USE_CYTHON:
-    extensions = cythonize(extensions)
+    extensions = cythonize(extensions, language_level = "3")
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 with open(os.path.join(dir_path, 'README.rst')) as f:
